@@ -17,3 +17,5 @@ Use the included batch files to run the site:
 * '1 - Make Environment.bat' to set up Python environment
 * '2 - Activate Enironment.bat' to run the environment and launch the flask site
 * '3 - Delete Environment.bat' to remove the environment before pushing to GitHub
+
+* - Uncompress the env file
