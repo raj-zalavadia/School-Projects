@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Bootsrap/JQuery -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+	<title id="name"></title>
+	<style>
+	.nondrop
+	{
+		/* Puts navbar items a little closer to logo  */
+		margin-left: -10px;
+	}
+	.bossimg
+	{
+		width: 100%;
+		max-width: 500px;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	</style>
+</head>
+<body>
+	<!-- Navbar start -->
+	<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="index.html">
+				<!-- Logo -->
+				<img src="static/eldenLogo.png" width="30" height="30" alt="">
+			</a>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<!-- Regular section --->
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0 nondrop">
+					<li class="nav-item">
+						<a class="nav-link" aria-current="page" href="index.html">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" aria-current="page" href="survey.html">Survey</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" aria-current="page" href="boss_rankings.html">Boss Rankings</a>
+					</li>
+				</ul>
+				<!-- Dropdown section -->
+				<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+					<li class="nav-item dropstart">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+							View Bosses
+						</a>
+						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<!-- Behold, pain -->
+							<li><a class="dropdown-item" onclick="sessionStorage.setItem('selBoss', 'Godrick the Grafted')" href="boss_page.html">Godrick the Grafted</a></li>
+							<li><a class="dropdown-item" onclick="sessionStorage.setItem('selBoss', 'Rennala Queen of The Full Moon')" href="boss_page.html">Rennala Queen of The Full Moon</a></li>
+							<li><a class="dropdown-item" onclick="sessionStorage.setItem('selBoss', 'Starscourge Radahn')" href="boss_page.html">Starscourge Radahn</a></li>
+							<li><a class="dropdown-item" onclick="sessionStorage.setItem('selBoss', 'Morgott the Omen King')" href="boss_page.html">Morgott the Omen King</a></li>
+							<li><a class="dropdown-item" onclick="sessionStorage.setItem('selBoss', 'Rykard, Lord of Blasphemy')" href="boss_page.html">Rykard, Lord of Blasphemy</a></li>
+							<li><a class="dropdown-item" onclick="sessionStorage.setItem('selBoss', 'Malenia, Blade of Miquella')" href="boss_page.html">Malenia, Blade of Miquella</a></li>
+							<li><a class="dropdown-item" onclick="sessionStorage.setItem('selBoss', 'Lichdragon Fortissax')" href="boss_page.html">Lichdragon Fortissax</a></li>
+							<li><a class="dropdown-item" onclick="sessionStorage.setItem('selBoss', 'Beast Clergyman / Maliketh')" href="boss_page.html">Beast Clergyman / Maliketh</a></li>
+							<li><a class="dropdown-item" onclick="sessionStorage.setItem('selBoss', 'Astel, Natural Born of The Void')" href="boss_page.html">Astel, Natural Born of The Void</a></li>
+							<li><a class="dropdown-item" onclick="sessionStorage.setItem('selBoss', 'Regal Ancestor Spirit')" href="boss_page.html">Regal Ancestor Spirit</a></li>
+							<li><a class="dropdown-item" onclick="sessionStorage.setItem('selBoss', 'Radagon of The Golden Order / Elden Beast')" href="boss_page.html">Radagon of The Golden Order / Elden Beast</a></li>
+							<li><a class="dropdown-item" onclick="sessionStorage.setItem('selBoss', 'Godfrey,First Elden Lord')" href="boss_page.html">Godfrey,First Elden Lord</a></li>
+							<li><a class="dropdown-item" onclick="sessionStorage.setItem('selBoss', 'Fire Giant')" href="boss_page.html">Fire Giant</a></li>
+							<li><a class="dropdown-item" onclick="sessionStorage.setItem('selBoss', 'Dragonlord Placidusax')" href="boss_page.html">Dragonlord Placidusax</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<!-- Navbar end -->
+	<div class="container mx-auto">
+		<!-- Title/Image -->
+		<div>
+			<br>
+			<br>
+			<img class="bossimg" id="bossimg" src="">
+			<br>
+			<h1 class="display-1 text-center" id="bossname"></h1>
+			<br>
+		</div>
+		<!-- Desc/Tips -->
+		<div>
+			<p class="display-6">Description</p>
+			<p id="descr">Lorem ipsum doler...</p>
+			<br>
+			<p class="display-6">Tips</p>
+			<p id="tips">Lorem ipsum doler...</p>
+			<br>
+			<br>
+		</div>
+	</div>
+</body>
+<!-- Footer -->
+<footer class="footer mt-auto py-3 bg-light">
+	<div class="container">
+		<span class="text-muted">CSCI 4710 - Group 26</span>
+	</div>
+	<!-- Script for importing boss info -->
+	<script src="static/scripts/import_info.js"></script>
+</footer>
+</html>

@@ -1,0 +1,1 @@
+PowerShell py -m venv env ; pip install flask ; pip install flask-sqlalchemy

@@ -1,0 +1,1 @@
+PowerShell -NoExit env\Scripts\activate ; flask run
